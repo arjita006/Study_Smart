@@ -1,0 +1,107 @@
+protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            bindclass();
+            bindlang();
+        }
+        if (!IsPostBack)
+        {
+            bind_class();
+        }
+    }
+
+    private void bindclass()
+    {
+        string sql;
+        sql = "exec class1 @action=3";
+        dt.Rows.Clear();
+        ddlclass.Items.Clear();
+        dt = al.select(sql);
+        if (dt.Rows.Count > 0)
+        {
+            DataRow dr = dt.NewRow();
+            dr["class_name"] = "--select--";
+            dr["class_id"] = "0";
+            dt.Rows.InsertAt(dr, 0);
+            ddlclass.DataTextField = "class_name";
+            ddlclass.DataValueField = "class_id";
+            ddlclass.DataSource = dt;
+            ddlclass.DataBind();
+        }
+    }
+    private void bindlang()
+    {
+        string sql;
+        sql = "exec lang @action=3";
+        dt.Rows.Clear();
+        ddllanguage.Items.Clear();
+        dt = al.select(sql);
+        if (dt.Rows.Count > 0)
+        {
+            DataRow dr = dt.NewRow();
+            dr["lang_name"] = "--select--";
+            dr["lang_id"] = "0";
+            dt.Rows.InsertAt(dr, 0);
+            ddllanguage.DataTextField = "lang_name";
+            ddllanguage.DataValueField = "lang_id";
+            ddllanguage.DataSource = dt;
+            ddllanguage.DataBind();
+        }
+    }
+
+ protected void btnsubmit_Click(object sender, EventArgs e)
+    {
+        ar = new byte[FileUpload1.PostedFile.ContentLength];
+        FileUpload1.PostedFile.InputStream.Read(ar, 0, FileUpload1.PostedFile.ContentLength);
+        ms = new MemoryStream(ar);
+        string chapter = txtchapter.Text;
+        string topic = txttopic.Text;
+        hiddenlbl.Text = GetTextonly(txtanswer.Content);
+        string answer = hiddenlbl.Text;  
+        string c=ddlclass.Text;
+        string l=ddllanguage.Text;
+
+        int cl = Convert.ToInt32(ddlclass.SelectedValue);
+        int lang = Convert.ToInt32(ddllanguage.SelectedValue);
+        if (!string.IsNullOrEmpty(chapter.Trim()) && !string.IsNullOrEmpty(topic.Trim()) && !string.IsNullOrEmpty(answer.Trim()) && !string.IsNullOrEmpty(c.Trim()) && !string.IsNullOrEmpty(l.Trim()))
+       {
+            if (FileUpload1.HasFile)
+            {
+                if (FileUpload1.PostedFile.ContentType == "image/jpeg" || FileUpload1.PostedFile.ContentType == "image/png" || FileUpload1.PostedFile.ContentType == "image/gif")
+                {
+                    filename = Path.GetFileName(FileUpload1.FileName);
+                    string p = FileUpload1.PostedFile.ContentLength.ToString();
+                    int a = Convert.ToInt32(p) / 1024;
+                    if (a < 512)
+                    {
+                        FileUpload1.SaveAs(Server.MapPath("~/") + filename);
+                        string sql = "exec content1 @classid=" + cl + ",@langid=" + lang + ",@chapter='" + chapter + "',@topic='" + topic + "',@answer='" + answer + "',@image=@image2,@action=1";
+                        int z = al.insert1(sql, ms.ToArray());
+                        if (z > 0)
+                        {
+
+                            lblmssg.Text = "Data inserted successfully";
+                            lblmssg.ForeColor = Color.Green;
+                            bind_class();
+
+                        }
+                        else
+                        {
+                            lblmssg.Text = "Failed to insert";
+                            lblmssg.ForeColor = Color.Red;
+                        }
+
+                    }
+
+
+                }
+            }
+       }
+        else
+        {
+            lblmssg.Text = "Please fill the details";
+            lblmssg.ForeColor = Color.Red;
+        }
+
+    }

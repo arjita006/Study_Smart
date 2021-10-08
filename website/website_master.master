@@ -1,0 +1,331 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="website_master.master.cs" Inherits="website_master" %>
+<%@ Register Assembly="AjaxControlToolkit"
+    Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Study Smart</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Mastering Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+      Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/JiSlider.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+       
+        <!-- banner -->
+        <div class="main_section_agile">
+            <div class="w3_agile_banner_top">
+                <div class="agile_phone_mail">
+                    <ul class="agile_forms">
+                        <li><%--<a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a>--%> <asp:LinkButton ID="LinkButton1" runat="server" class="active" href="#" data-toggle="modal" data-target="#myModal2"  ><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</asp:LinkButton></li>
+                        <li><%--<a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Sign Up</a>--%>
+                            <asp:LinkButton ID="LinkButton2" runat="server" href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o" aria-hidden="true"> </i> Sign Up
+                            </asp:LinkButton>
+                        </li>
+                        <li><asp:LinkButton ID="LinkButton4" runat="server"  OnClick="LinkButton4_Click" Visible="false"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Sign Out
+                            </asp:LinkButton></li>
+                         <li><%--<a href="#" data-toggle="modal" data-target="#mymodal4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Sign Up Tutor</a>--%>
+                             <asp:LinkButton ID="LinkButton3" runat="server" href="#" data-toggle="modal" data-target="#mymodal4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Sign Up Tutor</asp:LinkButton>
+                         </li>
+                       <li> <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click"  Visible="false"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Account
+                            </asp:LinkButton></li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>+(000) 123 456 232</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:education@w3layouts.com">studysmart@gmail.com</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            </div>
+            <div class="agileits_w3layouts_banner_nav">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header navbar-left">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1><a class="navbar-brand" href="index.html"><i>S</i><span>tudy<i> S</i>mart</span></a></h1>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                        <nav class="menu--iris">
+                            <ul class="nav navbar-nav menu__list">
+                                <li class="menu__item menu__item--current"><a href="index.aspx" class="menu__link">Home</a></li>
+                               <li class="dropdown menu__item">
+                                    <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" >Content<b class="caret"></b></a>
+                                    <ul class="dropdown-menu agile_short_dropdown" id="ul1">
+                                        <li>
+                                            <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">CLass 9</asp:LinkButton>
+                                            <%--<a href="viewcontent.aspx">Class 9</a>--%></li>
+                                        <li>
+                                            <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click">Class 10</asp:LinkButton><%--<a href="viewcontent.aspx">Class 10</a>--%></li>
+                                        <li>
+                                            <asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">Class 11</asp:LinkButton><%--<a href="viewcontent.aspx">Class 11</a>--%></li>
+                                         <li>
+                                             <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">Class 12</asp:LinkButton><%--<a href="viewcontent.aspx">Class 12</a>--%></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item"><a href="about_us.aspx" class="menu__link">About Us</a></li>
+                                <li class="dropdown menu__item">
+                                    <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown">Papers <b class="caret"></b></a>
+                                    <ul class="dropdown-menu agile_short_dropdown">
+                                        <li><a href="viewquestionpaper.aspx">Board Papers</a></li>
+                                        <li><a href="viewmockpaper.aspx">Mock Papaers</a></li>
+                                        <li><a href="viewnotes.aspx">Notes</a></li>
+                                    </ul>
+                                </li>
+                                <li  class="menu__item"><a href="contact_us.aspx">Contact Us</a></li>
+                            </ul>
+                            
+                             </nav>
+                        </div>
+                    </nav>
+                </div>
+                            <!-- banner -->
+        
+
+                          <%--  <div class="modal fade" id="myModal5" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        <div class="signin-form profile">
+                           
+                            <%--<h3 class="agileinfo_sign">S</h3>--%>
+                           <%-- <div class="login-form">
+                                <div>
+                                    <h3>Contact Us</h3>--%>
+                                   <%-- <asp:Label ID="lblname" runat="server" Text="Name"></asp:Label>--%>
+               <%-- <asp:TextBox ID="txtname" runat="server" placeholder="Enter your Name"></asp:TextBox>
+                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender9" runat="server" TargetControlID="txtname" ValidChars="qwertyuioplkjhgfdsazxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ ."></cc1:FilteredTextBoxExtender>
+              --%>
+                <%--<asp:Label ID="lblemail" runat="server" Text="Email"></asp:Label>--%>
+              <%--  <asp:TextBox ID="txtemail1" runat="server" placeholder="Enter your Email"></asp:TextBox>--%>
+              <%--  <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Invalid Email address" ControlToValidate="txtemail1" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator> 
+ --%>               <%--<asp:Label ID="lblmessage" runat="server" Text="Message"></asp:Label>--%>
+              <%--  <asp:TextBox ID="txtmsg" runat="server" TextMode="MultiLine" CssClass="form-control" Rows="5" placeholder="Your Message"></asp:TextBox>
+                <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />--%>
+               <%-- <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            --%>
+
+                      <%--      <%--<p><a href="#" data-toggle="modal" data-target="#myModal3">Don't have an account?</a></p>--%>
+                      <%--  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                         
+
+                                </div>
+                            </div>
+                       
+                    </div>--%>
+               <%-- </nav>--%>
+           
+
+        <!-- banner -->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        <div class="signin-form profile">
+                           
+                            <h3 class="agileinfo_sign">Sign In</h3>
+                            <div class="login-form">
+                                <div>
+                                    <asp:TextBox ID="txtmail" runat="server" placeholder="E-mail"></asp:TextBox>
+                                    <%--<input type="text" name="email" placeholder="E-mail" >--%>
+                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Invalid Email address" ControlToValidate="txtmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                    <asp:TextBox ID="txtpassord" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                    <%--<input type="password" name="password" placeholder="Password" >--%>
+                                    <div class="tp">
+                                        <asp:Button ID="Button2" runat="server" Text="Sign In" OnClick="Button2_Click"/>
+                                        <asp:Label ID="lblmssg" runat="server" Text=""></asp:Label>
+                                        <%--<input type="submit" value="Sign In">--%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login-social-grids">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                </ul>
+                            </div>
+                            <p><a href="#" data-toggle="modal" data-target="#myModal3">Don't have an account?</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Modal1 -->
+        <!-- Modal2 -->
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        <div class="signin-form profile">
+                            <h3 class="agileinfo_sign">Sign Up</h3>
+                          
+                            <div class="login-form">
+                                <div>
+                                    <%-- <input type="text" name="name" placeholder="Username" >--%>
+                                    <asp:TextBox ID="txtuser" runat="server" placeholder="Username" ></asp:TextBox>
+                                    <%--<input type="email" name="email" placeholder="Email" >--%>
+                                     <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender5" runat="server" TargetControlID="txtuser" ValidChars="qwertyuioplkjhgfdsazxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ "></cc1:FilteredTextBoxExtender>
+                                    <asp:TextBox ID="txtemail" runat="server" placeholder="Email" ></asp:TextBox>
+                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Invalid Email address" ControlToValidate="txtemail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="red"></asp:RegularExpressionValidator>
+                                    <%--<input type="password" name="password" placeholder="Password" >--%>
+                                    <asp:TextBox ID="txtpass" runat="server" TextMode="Password" placeholder="Password" ></asp:TextBox>
+                                    <%--<input type="password" name="password" placeholder="Confirm Password" >--%>
+                                      <asp:TextBox ID="txtconfirm" runat="server" TextMode="Password" placeholder="confirm Password" ></asp:TextBox>
+                                    <asp:TextBox ID="txtphone" runat="server" placeholder="Mobile Number" MaxLength="10"></asp:TextBox>
+                                     <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender6" runat="server" TargetControlID="txtphone" ValidChars="1234567890" ></cc1:FilteredTextBoxExtender>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"  ControlToValidate="txtphone" ErrorMessage="Phone number should be of 10 digits"  ValidationExpression="^[\s\S]{8,}$" ForeColor="red"></asp:RegularExpressionValidator>
+                                     <%--<input type="text" name="mobileno" placeholder="" >--%>
+                                    <asp:TextBox ID="txtcity" runat="server" placeholder="City" ></asp:TextBox>
+                                     <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender7" runat="server" TargetControlID="txtcity" ValidChars="qwertyuioplkjhgfdsazxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ ,."></cc1:FilteredTextBoxExtender>
+
+                                     <%--<input type="password" name="password" placeholder="Confirm Password" >--%>
+                                    <asp:TextBox ID="txtstate" runat="server" placeholder="State" ></asp:TextBox>
+                                     <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender8" runat="server" TargetControlID="txtstate" ValidChars="qwertyuioplkjhgfdsazxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ ,."></cc1:FilteredTextBoxExtender>
+
+                                     <%--<input type="password" name="password" placeholder="Confirm Password" >--%>
+                                    <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
+                                    <asp:Button ID="btnsubmit" runat="server" Text="Submit" OnClick="btnsubmit_Click" CausesValidation="False" />
+
+                                </div>
+                            </div>
+
+                        </div>
+                       </div>
+
+                </div>
+            </div>
+        </div>
+       
+         <div class="modal fade" id="mymodal4" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        <div class="signin-form profile">
+                            <h3 class="agileinfo_sign">Sign Up tutor</h3>
+                          
+                            <div class="login-form">
+                                <div>
+                                   <asp:ScriptManager ID="ScriptManager1" runat="server"> </asp:ScriptManager>
+                                    <%-- <input type="text" name="name" placeholder="Username" >--%>
+                                   <asp:TextBox ID="tutname" runat="server" Placeholder="Tutor's Name"></asp:TextBox>
+                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" TargetControlID="tutname" ValidChars="qwertyuioplkjhgfdsazxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ "></cc1:FilteredTextBoxExtender>
+                                    <%--<input type="email" name="email" placeholder="Email" >--%>
+                                    <asp:TextBox ID="tutemail" runat="server" placeholder="Email"></asp:TextBox>
+                  <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email address" ControlToValidate="tutemail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="red"></asp:RegularExpressionValidator>
+                                    <%--<input type="password" name="password" placeholder="Password" >--%>
+                                    <asp:TextBox ID="tutpass" runat="server" TextMode="Password" placeholder="Password" ></asp:TextBox>
+                                    <%--<input type="password" name="password" placeholder="Confirm Password" >--%>
+                                      <asp:TextBox ID="tutcpass" runat="server" TextMode="Password" placeholder="confirm Password" ></asp:TextBox>
+                                      <asp:TextBox ID="tutqualification" runat="server" placeholder="Qualification"></asp:TextBox>
+                                    <asp:TextBox ID="tutphone" runat="server" placeholder="Mobile Number" MaxLength="10" ></asp:TextBox>
+                                     <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender2" runat="server" TargetControlID="tutphone" ValidChars="1234567890"></cc1:FilteredTextBoxExtender>
+                                      <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server"  ControlToValidate="tutphone" ErrorMessage="Phone number should be of 10 digits"  ValidationExpression="^[\s\S]{8,}$" ForeColor="red"></asp:RegularExpressionValidator>
+                                     <%--<input type="text" name="mobileno" placeholder="" >--%>
+                                    <asp:TextBox ID="tutaddress" runat="server" TextMode="MultiLine" placeholder="Address" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="tutcity" runat="server" placeholder="City"></asp:TextBox>
+                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender3" runat="server" TargetControlID="tutcity" ValidChars="qwertyuioplkjhgfdsazxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ ,."  ></cc1:FilteredTextBoxExtender>
+                                     <%--<input type="password" name="password" placeholder="Confirm Password" >--%>
+                                <asp:TextBox ID="tutstate" runat="server" placeholder="State"></asp:TextBox>
+                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender4" runat="server" TargetControlID="tutstate" ValidChars="qwertyuioplkjhgfdsazxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ ,."></cc1:FilteredTextBoxExtender >
+                                     <%--<input type="password" name="password" placeholder="Confirm Password" >--%>
+                                    <asp:Label ID="lblmsg1" runat="server" Text=""></asp:Label>
+                                    <asp:Button ID="btntutor" runat="server" Text="Submit"  OnClick="btntutor_Click" />
+                                  
+                                </div>
+                            </div>
+
+                        </div>
+                       </div>
+
+                </div>
+            </div>
+        </div>
+       
+        <!-- //Modal2 -->
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div>
+
+            <!-- footer -->
+            <div class="footer" style="padding:100px">
+                <div class="f-bg-w3l">
+                    <div class="container">
+                        <div class="col-md-4 w3layouts_footer_grid">
+                            <h2>Follow        <%-- <ul class="social_agileinfo">
+                                <li><a href="#" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>--%>
+                        </div>
+                        <div class="col-md-8 w3layouts_footer_grid">
+                            <div>
+                                <input type="email" name="Email" placeholder="Email..." >
+                                <input type="submit" value="">
+                            </div>
+                          <%--  <ul class="w3l_footer_nav">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="icons.html">Web Icons</a></li>
+                                <li><a href="mail.html">Mail Us</a></li>
+                            </ul>--%>
+                            <p>© 2019 Study Smart. All Rights Reserved | Design by Arpita And Arjita</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //footer -->
+
+        </div>
+    </form>
+</body>
+</html>

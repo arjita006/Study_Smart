@@ -1,0 +1,8 @@
+ }
+        sql = sql + condition;
+        da = new SqlDataAdapter(sql, con);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        DataList1.DataSource = ds.Tables[0].DefaultView;
+        DataList1.DataBind();
+        con.Close();
